@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <style>
+        ul li {
+            list-style: none;
+            display: inline;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 16px;
+            background-color: #11df22;
+            border-radius: 5px;
+
+       }
+        .navbar ul li a:hover {
+            background-color: red;
+        }
+        .navbar ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .navbar {
+            background-color: #4206e6;
+            padding: 10px;
+            text-align: right;
+        }
+        body{
+            background-color: #dfe7ee;
+        }
+        header {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .tagline{
+            text-align: center;
+        }
+        span{
+            color: black;
+            font-size: larger;
+            font-weight: bolder;
+        }
+
+        .portfolio-column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .social-footer{
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .social-links{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .social-links li {
+            display: inline;
+            margin: 0 15px;
+
+        }
+        .social-links a {
+            color: #1e90ff;
+            transition: color 0.3s;
+            font-size: larger;
+            text-decoration: none;
+        }
+        .social-links a:hover{
+            color: black;
+        }
+
+            .image-container{
+               display: flex;
+               justify-content: center;
+
+               border-radius: 50%;
+        }
+        img {
+            border-radius: 70%;
+            object-fit: cover;
+            border: 5px solid springgreen;
+
+        }
+        .column-list {
+            display: grid;
+            padding: 20px;
+            list-style-type: decimal;
+            margin: 5px 0;
+            gap: 15px;
+            margin: 4px;
+            background-color: #dfe7ee;
+            max-width: 200px;
+
+        }
+        .row{
+
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px;  /* adds margin the entire row*/
+            background-color: lightgrey;
+        }
+        .wrapper{
+            padding: 20px; /* creates the "margin" effect*/
+            background-color: lightblue;
+            transition: background-color 0.3s;
+
+
+        }
+        .wrapper:hover{
+            background-color: #11df22;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<!---------------------------------------------navbar-------------------------------------------------------->
+<nav>
+
+<div class="navbar">
+    <ul>
+        <li><a href="#about me">About Me</a></li>
+        <li><a href="{% url 'contact' %}">Contact Me</a></li>
+
+    </ul>
+</div>
+
+       <div class="image-container">
+           <img src="{% static 'images/myimage 2.jpg" width="200" height="200"/>
+       </div>
+   <p class="tagline"> <b>Mr.Kelvin Wambua</b> |<br> <br> Fullstack Engineer
+       </p>
+</nav>
+
+<!-------------------------sections-------->
+
+<section id="about me">
+
+
+<div class="row">
+    <div class="wrapper">
+    <ul class="column-list">
+        <li><span>Skills</span></li><br>
+        <li> Web Dev</li><br>
+        <li> Web Design</li><br>
+        <li> Graphics Design</li><br>
+        <li> LeaderShip</li><br>
+        <li>Teamwork</li><br>
+    </ul>
+    </div>
+
+
+<!---div class="portfolio-column"--->
+<div class="wrapper">
+
+
+    <ul class="column-list">
+        <li><span>Projects</span></li><br>
+
+        <li>Keltech solution Website</li><br>
+        
+        <li>Kelvin's Tech Hub</li><br>
+
+      
+    </ul>
+
+</div>
+
+
+</section>
+
+
+
+<br> <br>
+<footer class="social-footer">
+    <ul class="social-links">
+        <li><a href="https://www.instagram.com/wam_buakelvin">Instagram</a></li>||
+        <li><a https://x.com/home">Twitter</a></li>
+
+    </ul>
+
+</footer>
+</body>
+</html>
