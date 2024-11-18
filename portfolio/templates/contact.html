@@ -2,204 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        ul li {
-            list-style: none;
-            display: inline;
-        }
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 8px 16px;
-            background-color: #11df22;
-            border-radius: 5px;
-
-       }
-        .navbar ul li a:hover {
-            background-color: red;
-        }
-        .navbar ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        .navbar {
-            background-color: #4206e6;
-            padding: 10px;
-            text-align: right;
-        }
-        body{
+        body {
             background-color: #dfe7ee;
         }
-        header {
-            width: 100%;
-            height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .navbar-custom {
+            background-color: #4206e6;
         }
-        .header-image {
-            max-width: 100%;
-            height: auto;
+        .navbar-custom .nav-link {
+            color: white !important;
+            background-color: #11df22;
+            border-radius: 5px;
+            padding: 8px 16px;
+            transition: background-color 0.3s ease;
         }
-        .tagline{
-            text-align: center;
+        .navbar-custom .nav-link:hover {
+            background-color: red;
         }
-        span{
-            color: black;
-            font-size: larger;
-            font-weight: bolder;
-        }
-
-        .portfolio-column {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        .social-footer{
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .social-links{
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .social-links li {
-            display: inline;
-            margin: 0 15px;
-
-        }
-        .social-links a {
-            color: #1e90ff;
-            transition: color 0.3s;
-            font-size: larger;
-            text-decoration: none;
-        }
-        .social-links a:hover{
-            color: black;
-        }
-
-            .image-container{
-               display: flex;
-               justify-content: center;
-
-               border-radius: 50%;
-        }
-        img {
+        .profile-img {
             border-radius: 70%;
             object-fit: cover;
             border: 5px solid springgreen;
-
         }
-        .column-list {
-            display: grid;
-            padding: 20px;
-            list-style-type: decimal;
-            margin: 5px 0;
-            gap: 15px;
-            margin: 4px;
-            background-color: #dfe7ee;
-            max-width: 200px;
-
+        .social-footer {
+            background-color: #333;
+            color: #fff;
         }
-        .row{
-
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin: 20px;  /* adds margin the entire row*/
-            background-color: lightgrey;
+        .social-footer a {
+            color: #1e90ff;
+            transition: color 0.3s;
         }
-        .wrapper{
-            padding: 20px; /* creates the "margin" effect*/
-            background-color: lightblue;
-            transition: background-color 0.3s;
-
-
+        .social-footer a:hover {
+            color: black;
         }
-        .wrapper:hover{
-            background-color: #11df22;
-
+        .wrapper:hover {
+            background-color: #11df22 !important;
         }
-
     </style>
 </head>
 <body>
 
-<!---------------------------------------------navbar-------------------------------------------------------->
-<nav>
 
-<div class="navbar">
-    <ul>
-        <li><a href="#about me">About Me</a></li>
-        <li><a href="{% url 'contact' %}">Contact Me</a></li>
+<!-- Header -->
+<div class="text-center my-4">
 
-    </ul>
+    <p class="tagline fw-bold">Mr. Kelvin Wambua<br>Fullstack Engineer</p>
 </div>
 
-       <div class="image-container">
-           <img src="{% static 'images/myimage 2.jpg" width="200" height="200"/>
-       </div>
-   <p class="tagline"> <b>Mr.Kelvin Wambua</b> |<br> <br> Fullstack Engineer
-       </p>
-</nav>
-
-<!-------------------------sections-------->
-
-<section id="about me">
-
-
-<div class="row">
-    <div class="wrapper">
-    <ul class="column-list">
-        <li><span>Skills</span></li><br>
-        <li> Web Dev</li><br>
-        <li> Web Design</li><br>
-        <li> Graphics Design</li><br>
-        <li> LeaderShip</li><br>
-        <li>Teamwork</li><br>
-    </ul>
+<!-- Buttons Section -->
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12 text-start">
+            <a href="#about-me" class="btn btn-primary me-2">About Me</a>
+            <a href="{% url 'contact' %}" class="btn btn-secondary">Contact Me</a>
+        </div>
     </div>
-
-
-<!---div class="portfolio-column"--->
-<div class="wrapper">
-
-
-    <ul class="column-list">
-        <li><span>Projects</span></li><br>
-
-        <li>Keltech solution Website</li><br>
-        
-        <li>Kelvin's Tech Hub</li><br>
-
-      
-    </ul>
-
 </div>
 
-
+<!-- Personal Profile Section -->
+<section id="personal-profile" class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="fw-bold">Personal Profile</h2>
+                <p class="lead">
+                    I am Kelvin Wambua, a passionate Mathematics and Computer Science student at JKUAT. As an aspiring web developer, I possess skills in web development and other technical areas. I am dedicated to honing my expertise and creating impactful digital solutions. I strive for excellence in every project I undertake.
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- Sections -->
+<section id="about-me" class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="wrapper p-3 bg-light border rounded">
+                    <ul class="list-group">
+                        <li class="list-group-item active" aria-current="true"><span>Skills</span></li>
+                        <li class="list-group-item">Web Development</li>
+                        <li class="list-group-item">Web Design</li>
+                        <li class="list-group-item">Graphics Design</li>
+                        <li class="list-group-item">Leadership</li>
+                        <li class="list-group-item">Teamwork</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="wrapper p-3 bg-light border rounded">
+                    <ul class="list-group">
+                        <li class="list-group-item active" aria-current="true"><span>Projects</span></li>
+                        <li class="list-group-item">Keltech Solution Website</li>
+                        <li class="list-group-item">Kelvin's Tech Hub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-
-<br> <br>
-<footer class="social-footer">
-    <ul class="social-links">
-        <li><a href="https://www.instagram.com/wam_buakelvin">Instagram</a></li>||
-        <li><a https://x.com/home">Twitter</a></li>
-
+<!-- Footer -->
+<footer class="social-footer py-3 text-center">
+    <ul class="list-inline mb-2">
+        <li class="list-inline-item"><a href="https://www.instagram.com/wam_buakelvin">Instagram</a></li>
+        <li class="list-inline-item">|</li>
+        <li class="list-inline-item"><a href="https://x.com/home">Twitter</a></li>
     </ul>
-
+    <p class="mb-0">@ 2024 All Rights Reserved |Kelvin Wambua </p>
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
