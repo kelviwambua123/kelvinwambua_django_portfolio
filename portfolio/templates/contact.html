@@ -24,9 +24,14 @@
             background-color: red;
         }
         .profile-img {
-            border-radius: 70%;
+            border-radius: 50%;
             object-fit: cover;
             border: 5px solid springgreen;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .social-footer {
             background-color: #333;
@@ -46,11 +51,9 @@
 </head>
 <body>
 
-
 <!-- Header -->
 <div class="text-center my-4">
-
-    <p class="tagline fw-bold">Mr. Kelvin Wambua<br>Fullstack Engineer</p>
+    <p class="tagline fw-bold">Mr. Kelvin Wambua <br> --<br>Fullstack Engineer</p>
 </div>
 
 <!-- Buttons Section -->
@@ -61,6 +64,11 @@
             <a href="{% url 'contact' %}" class="btn btn-secondary">Contact Me</a>
         </div>
     </div>
+</div>
+
+<!-- Image Section -->
+<div class="container text-center mb-5">
+    <img src="Portfolio/CEO KEV.jpg" alt="Kelvin Wambua" class="profile-img img-fluid" style="max-width: 200px; height: auto;">
 </div>
 
 <!-- Personal Profile Section -->
@@ -113,7 +121,7 @@
         <li class="list-inline-item">|</li>
         <li class="list-inline-item"><a href="https://x.com/home">Twitter</a></li>
     </ul>
-    <p class="mb-0">@ 2024 All Rights Reserved |Kelvin Wambua </p>
+    <p class="mb-0">@ 2024 All Rights Reserved | Kelvin Wambua</p>
 </footer>
 
 <!-- Bootstrap JS -->
